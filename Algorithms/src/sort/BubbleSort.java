@@ -21,7 +21,7 @@ public class BubbleSort extends CommonUtil{
 				if(isLess(array[j + 1], array[j])){
 					exchange(array, j, j + 1);
 				}
-			}
+			}  
 		}  
 		t.stop();
 	}
