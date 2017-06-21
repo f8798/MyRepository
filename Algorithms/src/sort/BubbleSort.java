@@ -22,7 +22,7 @@ public class BubbleSort extends CommonUtil{
 					exchange(array, j, j + 1);
 				}
 			}
-		}
+		}  
 		t.stop();
 	}
 }
