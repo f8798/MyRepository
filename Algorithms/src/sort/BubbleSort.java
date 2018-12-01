@@ -7,7 +7,7 @@ public class BubbleSort extends CommonUtil{
 	public static void main(String[] args) {
 		
 		//200000 140814
-		Comparable[] array = generateRandomComparableArray(200000);
+		Comparable[] array = generateRandomComparableArray(300000);
 		//printArray(array);
 		sort(array);
 		//printArray(array);
