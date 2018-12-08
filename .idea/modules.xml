@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/MyRepository.iml" filepath="$PROJECT_DIR$/.idea/MyRepository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tank1990/Tank1990.iml" filepath="$PROJECT_DIR$/Tank1990/Tank1990.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Algorithms/algorithms.iml" filepath="$PROJECT_DIR$/Algorithms/algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbostudy/dubbostudy.iml" filepath="$PROJECT_DIR$/dubbostudy/dubbostudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbostudy-consumer/dubbostudy-consumer.iml" filepath="$PROJECT_DIR$/dubbostudy-consumer/dubbostudy-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JMM/jmm.iml" filepath="$PROJECT_DIR$/JMM/jmm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nio/nio.iml" filepath="$PROJECT_DIR$/nio/nio.iml" />
+    </modules>
+  </component>
+</project>
