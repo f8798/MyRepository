@@ -10,16 +10,20 @@ public class QuickSort extends CommonUtil {
 	public static void main(String[] args) {
 		Timer t = new Timer();
 		//2000000 sort:  553ms  sortByStack:801ms
-		Comparable[] array = generateRandomComparableArray(2000000);
+		Comparable[] array = generateRandomComparableArray(5);
 //		checkSort(array);
 //		printArray(array);
 		t.start();
-//		sort(array, 0, array.length - 1);
+		sort(array, 0, array.length - 1);
 		sortByStack(array);
 //		System.out.println(select(array, 0));
 		t.stop();
 //		printArray(array);
 //		checkSort(array);
+//      3053365438      xinxinxx777
+//     xiaochengzi8868
+
+		select(array, 2)
 	}
 	
 	public static void sort(Comparable[] array, int lo, int hi){
