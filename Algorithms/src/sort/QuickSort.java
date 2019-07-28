@@ -22,6 +22,7 @@ public class QuickSort extends CommonUtil {
 //		checkSort(array);
 //      3053365438      xinxinxx777
 //     xiaochengzi8868
+        // 3068990848 changping
 		// newest site 51avi.ad999@gmail.com
 
 		select(array, 2)
