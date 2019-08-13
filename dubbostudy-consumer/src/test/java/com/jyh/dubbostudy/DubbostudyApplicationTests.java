@@ -9,6 +9,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class DubbostudyApplicationTests {
 
+    private String a;
+    public DubbostudyApplicationTests() {
+    }
+
+    public DubbostudyApplicationTests(String a) {
+        Class c = a.getClass();
+
+    }
+
     @Test
     public void contextLoads() {
     }
