@@ -6,8 +6,15 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/FileProcessor/pom.xml" />
+        <option value="$PROJECT_DIR$/Algorithms/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbostudy/pom.xml" />
+        <option value="$PROJECT_DIR$/JMM/pom.xml" />
+        <option value="$PROJECT_DIR$/nio/pom.xml" />
+        <option value="$PROJECT_DIR$/dubbostudy-consumer/pom.xml" />
+          <option value="$PROJECT_DIR$/FileProcessor/pom.xml" />
+
       </list>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>
