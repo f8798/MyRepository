@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/JMM/pom.xml" />
         <option value="$PROJECT_DIR$/nio/pom.xml" />
         <option value="$PROJECT_DIR$/dubbostudy-consumer/pom.xml" />
+          <option value="$PROJECT_DIR$/FileProcessor/pom.xml" />
+
       </list>
     </option>
   </component>

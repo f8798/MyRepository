@@ -9,6 +9,8 @@
       <module fileurl="file://$PROJECT_DIR$/dubbostudy-consumer/dubbostudy-consumer.iml" filepath="$PROJECT_DIR$/dubbostudy-consumer/dubbostudy-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/JMM/jmm.iml" filepath="$PROJECT_DIR$/JMM/jmm.iml" />
       <module fileurl="file://$PROJECT_DIR$/nio/nio.iml" filepath="$PROJECT_DIR$/nio/nio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FileProcessor/FileProcessor.iml" filepath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MyRepository.iml" filepath="$PROJECT_DIR$/.idea/MyRepository.iml" />
     </modules>
   </component>
 </project>
