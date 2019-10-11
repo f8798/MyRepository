@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FileProcessor/FileProcessor.iml" filepath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/MyRepository.iml" filepath="$PROJECT_DIR$/.idea/MyRepository.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tank1990/Tank1990.iml" filepath="$PROJECT_DIR$/Tank1990/Tank1990.iml" />
       <module fileurl="file://$PROJECT_DIR$/Algorithms/algorithms.iml" filepath="$PROJECT_DIR$/Algorithms/algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crawler/crawler.iml" filepath="$PROJECT_DIR$/crawler/crawler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbostudy/dubbostudy.iml" filepath="$PROJECT_DIR$/dubbostudy/dubbostudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbostudy-consumer/dubbostudy-consumer.iml" filepath="$PROJECT_DIR$/dubbostudy-consumer/dubbostudy-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/JMM/jmm.iml" filepath="$PROJECT_DIR$/JMM/jmm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/multithread/multithread.iml" filepath="$PROJECT_DIR$/multithread/multithread.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/nio/nio.iml" filepath="$PROJECT_DIR$/nio/nio.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FileProcessor/FileProcessor.iml" filepath="$PROJECT_DIR$/FileProcessor/FileProcessor.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/MyRepository.iml" filepath="$PROJECT_DIR$/.idea/MyRepository.iml" />
     </modules>
   </component>
 </project>

@@ -8,24 +8,31 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="algorithms" />
+        <module name="crawler" />
+        <module name="demo" />
         <module name="dubbostudy" />
         <module name="dubbostudy-consumer" />
-        <module name="FileProcessor" />
         <module name="jmm" />
+        <module name="multithread" />
+        <module name="netty" />
         <module name="nio" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="algorithms" target="1.5" />
-      <module name="dubbostudy" target="1.8" />
-      <module name="dubbostudy-consumer" target="1.8" />
-      <module name="FileProcessor" target="1.5" />
-      <module name="jmm" target="1.5" />
-      <module name="nio" target="1.5" />
+      <module name="algorithms" target="8" />
+      <module name="crawler" target="8" />
+      <module name="demo" target="8" />
+      <module name="dubbostudy" target="8" />
+      <module name="dubbostudy-consumer" target="8" />
+      <module name="jmm" target="8" />
+      <module name="multithread" target="8" />
+      <module name="netty" target="8" />
+      <module name="nio" target="8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="" />
       <module name="dubbostudy" options="-parameters" />
       <module name="dubbostudy-consumer" options="-parameters" />
     </option>

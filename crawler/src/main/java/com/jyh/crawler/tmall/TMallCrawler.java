@@ -50,6 +50,9 @@ public class TMallCrawler {
 
         List<WebElement> itemList = driver.findElements(By.cssSelector("a[class=\"item-name J_TGoldData\"]"));
 
+
+
+
         itemList.forEach(item -> {
             String itemUrl = item.getAttribute("href");
             item.click();
