@@ -14,6 +14,8 @@ public abstract class Page {
 
     private Map<String, Page> subPageMap;
 
+    private Page parentPage;
+
     public Page(String name){
         this.name = name;
     }
@@ -26,5 +28,45 @@ public abstract class Page {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getHandle() {
+        return handle;
+    }
+
+    public void setHandle(String handle) {
+        this.handle = handle;
+    }
+
+    public Map<String, Page> getSubPageMap() {
+        return subPageMap;
+    }
+
+    public void setSubPageMap(Map<String, Page> subPageMap) {
+        this.subPageMap = subPageMap;
+    }
+
+    public Page getParentPage() {
+        return parentPage;
+    }
+
+    public void setParentPage(Page parentPage) {
+        this.parentPage = parentPage;
     }
 }
