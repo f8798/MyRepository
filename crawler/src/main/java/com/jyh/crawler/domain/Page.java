@@ -1,10 +1,13 @@
 package com.jyh.crawler.domain;
 
+import com.jyh.crawler.enums.PageNameEnum;
+
+import java.util.HashMap;
 import java.util.Map;
 
 public abstract class Page {
 
-    private String name;
+    private PageNameEnum name;
 
     private String url;
 
@@ -12,21 +15,28 @@ public abstract class Page {
 
     private String handle;
 
-    private Map<String, Page> subPageMap;
+    private Map<String, Page> subPageMap = new HashMap<>();
 
     private Page parentPage;
 
-    public Page(String name){
+    public Page(PageNameEnum name){
         this.name = name;
     }
 
-    public abstract String gotoSubPage(String name, BrowerContext browerContext);
+    public abstract String openSubPage(PageNameEnum name, BrowerContext browerContext);
 
-    public String getName() {
+    public abstract String openCurrentPage(BrowerContext browerContext);
+
+    public void parentOf(Page page){
+        this.subPageMap.put(page.getName().name(), page);
+        page.setParentPage(this);
+    }
+
+    public PageNameEnum getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(PageNameEnum name) {
         this.name = name;
     }
 

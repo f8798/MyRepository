@@ -1,9 +1,11 @@
 package com.jyh.crawler.domain;
 
+import com.jyh.crawler.enums.PageNameEnum;
 import com.jyh.crawler.enums.SeleniumDriverEnum;
 import com.jyh.crawler.factory.SeleniumDriverFactory;
 import org.openqa.selenium.WebDriver;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
@@ -14,22 +16,34 @@ public class BrowerContext {
 
     Page currentPage;
 
-    Map<String, Page> pageNameMap;
+    Map<String, Page> pageNameMap ;
 
     WebDriver driver;
 
     public BrowerContext(SeleniumDriverEnum browerType, Page homePage){
         this.driver = SeleniumDriverFactory.getDirver(browerType);
         this.currentPage = homePage;
-        populateCurrentPageInfo(homePage);
+        this.pageNameMap = new HashMap<>();
+        Page page = homePage;
+
+        populateMap(page);
+    }
+
+    public void populateMap(Page page){
+        pageNameMap.put(page.getName().name(), page);
+        if(page.getSubPageMap().size() != 0){
+            page.getSubPageMap().entrySet().forEach(stringPageEntry -> {
+                populateMap(stringPageEntry.getValue());
+            });
+        }
     }
 
     /**
      * 页面跳转
      * @param pageName
      */
-    public void gotoPage(String pageName){
-        Page page = pageNameMap.get(pageName);
+    public void gotoPage(PageNameEnum pageName){
+        Page page = pageNameMap.get(pageName.name());
 
         if(page.getHandle() == null){
             Stack<Page> pathStack = new Stack();
@@ -50,16 +64,17 @@ public class BrowerContext {
                 page = page.getParentPage();
             }while(page.getParentPage() != null && page.getHandle() == null );
 
+            //按page的关联层级，由上层浏览至该指定页面
             while(!pathStack.isEmpty()){
                 Page currentPage = pathStack.pop();
+                //顶层页面未打开，在这里打开。
                 if(currentPage.getHandle() == null){
-                    page.gotoSubPage();
+                    currentPage.openCurrentPage(this);
+                }
+                if(!pathStack.isEmpty()){
+                    currentPage.openSubPage(pathStack.peek().getName(),this);
                 }
             }
-            populateCurrentPageInfo(page);
-
-            //按page的关联层级，由上层浏览至该指定页面
-
         }else{
             //如果已存在已打开页面，浏览器直接切换tab
             driver.switchTo().window(page.getHandle());
@@ -75,5 +90,29 @@ public class BrowerContext {
 
     public String  getPageSource(){
         return driver.getPageSource();
+    }
+
+    public Page getCurrentPage() {
+        return currentPage;
+    }
+
+    public void setCurrentPage(Page currentPage) {
+        this.currentPage = currentPage;
+    }
+
+    public Map<String, Page> getPageNameMap() {
+        return pageNameMap;
+    }
+
+    public void setPageNameMap(Map<String, Page> pageNameMap) {
+        this.pageNameMap = pageNameMap;
+    }
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(WebDriver driver) {
+        this.driver = driver;
     }
 }
