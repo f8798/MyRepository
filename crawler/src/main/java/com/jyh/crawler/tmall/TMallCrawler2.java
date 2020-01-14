@@ -33,9 +33,9 @@ public class TMallCrawler2 {
         jordanHomePage.parentOf(jordanManPage);
         jordanManPage.parentOf(jordanManShoesPage);
 
-        BrowerContext context = new BrowerContext(SeleniumDriverEnum.FIREFOX, page);
+        BrowerContext context = new BrowerContext(SeleniumDriverEnum.CHROME, page);
 
-        context.gotoPage(PageNameEnum.T_MALL_MERCHANT_JORDAN_HOME_PAGE);
+        context.gotoPage(PageNameEnum.T_MALL_MERCHANT_JORDAN_MAN_SHOES);
 
     }
 }

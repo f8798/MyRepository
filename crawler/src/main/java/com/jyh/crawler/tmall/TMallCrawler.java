@@ -19,7 +19,9 @@ public class TMallCrawler {
 
         WebDriver driver = SeleniumDriverFactory.getDirver(SeleniumDriverEnum.CHROME);
 
-        driver.get("https://www.tmall.com");
+        driver.get("https://jordan.tmall.com/category-1328804987.htm?spm=a1z10.1-b-s.w5001-16722994182.4.38157285NqIqsi&scene=taobao_shop");
+
+
         WebElement searchInput = driver.findElement(By.name("q"));
         searchInput.sendKeys("jordan官方旗舰店");
         WebElement submitButton = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/div/div[2]/form/fieldset/div/button"));

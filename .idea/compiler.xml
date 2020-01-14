@@ -19,15 +19,15 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="algorithms" target="8" />
-      <module name="crawler" target="8" />
-      <module name="demo" target="8" />
-      <module name="dubbostudy" target="8" />
-      <module name="dubbostudy-consumer" target="8" />
-      <module name="jmm" target="8" />
-      <module name="multithread" target="8" />
-      <module name="netty" target="8" />
-      <module name="nio" target="8" />
+      <module name="algorithms" target="1.8" />
+      <module name="crawler" target="1.8" />
+      <module name="demo" target="1.6" />
+      <module name="dubbostudy" target="1.8" />
+      <module name="dubbostudy-consumer" target="1.8" />
+      <module name="jmm" target="1.8" />
+      <module name="multithread" target="1.8" />
+      <module name="netty" target="1.8" />
+      <module name="nio" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

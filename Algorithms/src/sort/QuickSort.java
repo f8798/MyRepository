@@ -25,6 +25,11 @@ public class QuickSort extends CommonUtil {
         // 3068990848 changping
 		// newest site 51avi.ad999@gmail.com
 
+//		长宁豆豆：2944707544
+//
+//		jojo:2658427255
+//
+//		黄埔雪儿：2534001277
 		select(array, 2)
 	}
 	

@@ -13,13 +13,13 @@ import java.sql.Driver;
 public class HomePage extends Page {
     public HomePage() {
         super(PageNameEnum.T_MALL_HOME_PAGE);
-        this.setUrl("www.tmall.com");
+        this.setUrl("https://www.tmall.com");
     }
 
     @Override
     public String openSubPage(PageNameEnum name, BrowerContext browerContext) {
         switch (name){
-            case T_MALL_MERCHANT_JORDAN_MAN:{
+            case T_MALL_MERCHANT_JORDAN_HOME_PAGE:{
                 WebDriver driver = browerContext.getDriver();
                 driver.get("https://www.tmall.com");
                 WebElement searchInput = driver.findElement(By.name("q"));
@@ -39,7 +39,7 @@ public class HomePage extends Page {
                 }
                 WebElement enterIntoStoreButton = driver.findElement(By.xpath("/html/body/div[1]/div/div[3]/div[2]/div[1]/div[3]/a"));
                 enterIntoStoreButton.click();
-                SeleniumTabSwitcher.switchToByTitle(driver, "新版首页");
+                SeleniumTabSwitcher.switchToByUrl(driver, "jordan.tmall.com/shop/view_shop.htm");
                 Page subPage = this.getSubPageMap().get(PageNameEnum.T_MALL_MERCHANT_JORDAN_HOME_PAGE.name());
                 subPage.setUrl(driver.getCurrentUrl());
                 subPage.setTitle(driver.getTitle());

@@ -1,5 +1,6 @@
 package com.jyh.crawler.domain;
 
+import com.jyh.crawler.domain.tmall.HomePage;
 import com.jyh.crawler.enums.PageNameEnum;
 import com.jyh.crawler.enums.SeleniumDriverEnum;
 import com.jyh.crawler.factory.SeleniumDriverFactory;
@@ -48,27 +49,42 @@ public class BrowerContext {
         if(page.getHandle() == null){
             Stack<Page> pathStack = new Stack();
             //找到距离垓页面层级最近的已打开的父页面, 并保存路径
-            do{
-                if(page.getParentPage() == null){
-                    //已到达顶部，主页，退出循环
-                    if(page.getHandle() == null)
-                        pathStack.push(page);
-                    break;
-                }else{
-                    pathStack.push(page);
+//            do{
+//                if(page.getParentPage() == null){
+//                    //已到达顶部，主页，退出循环
+//                    if(page.getHandle() == null)
+//                        pathStack.push(page);
+//                    break;
+//                }else{
+//                    pathStack.push(page);
+//                    if(page.getParentPage().getHandle() != null){
+//                        pathStack.push(page.getParentPage());
+//                        break;
+//                    }
+//                }
+//                page = page.getParentPage();
+//            }while(page.getParentPage() != null && page.getHandle() == null );
+
+            while(true){
+                pathStack.push(page);
+                if(page.getParentPage()!=null){
                     if(page.getParentPage().getHandle() != null){
                         pathStack.push(page.getParentPage());
                         break;
+                    }else{
+                        page = page.getParentPage();
                     }
+                }else{
+                    break;
                 }
-                page = page.getParentPage();
-            }while(page.getParentPage() != null && page.getHandle() == null );
+
+            }
 
             //按page的关联层级，由上层浏览至该指定页面
             while(!pathStack.isEmpty()){
                 Page currentPage = pathStack.pop();
                 //顶层页面未打开，在这里打开。
-                if(currentPage.getHandle() == null){
+                if(currentPage instanceof HomePage && currentPage.getHandle() == null){
                     currentPage.openCurrentPage(this);
                 }
                 if(!pathStack.isEmpty()){
