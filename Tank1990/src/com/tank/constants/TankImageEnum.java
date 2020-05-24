@@ -19,7 +19,7 @@ public enum TankImageEnum {
 	private String fileAddress;
 	private TankImageEnum(){};
 	private TankImageEnum(String fileName){
-		this.fileAddress = "images/"+fileName;
+		this.fileAddress = "C:\\Users\\f8798\\IdeaProjects\\MyRepository\\Tank1990\\images\\"+fileName;
 	}
 	
 	public String getFileAddress(){
